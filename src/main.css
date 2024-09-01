@@ -128,6 +128,12 @@ body {
     background-color: var(--color-area);
 }
 
+.movie-list .message {
+    color: var(--color-primary);
+    font-size: 20px;
+    text-align: center;
+}
+
 .movie-list .movies {
     display: flex; /*수평정렬*/
     flex-wrap: wrap; /*자리가 부족하면 줄바꿈 가능하도록*/
