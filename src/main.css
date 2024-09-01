@@ -158,3 +158,17 @@ body {
 .movies .movie .info .title {
     color: var(--color-white);
 }
+
+.view-more {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    /*button은 블럭요소가 아니라 magin auto를 줘도 자동 정렬이 되지 않는다.
+    블럭요소로 바꿔주어야 함*/
+    display: block;
+}
+
+.view-more.hide{
+    display: none;
+}
+
