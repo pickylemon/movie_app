@@ -1,4 +1,4 @@
-import { Component } from '../core/core'
+import { Component } from '../core/core.js'
 import Headline from '../components/Headline'
 import Search from '../components/Search'
 import MovieList from '../components/MovieList'

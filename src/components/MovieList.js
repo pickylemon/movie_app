@@ -1,4 +1,4 @@
-import { Component } from '../core/core'
+import { Component } from '../core/core.js'
 import movieStore from '../store/movie'
 import MovieItem from './MovieItem'
 

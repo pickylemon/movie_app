@@ -1,4 +1,4 @@
-import { Component } from '../core/core'
+import { Component } from '../core/core.js'
 
 export default class Headline extends Component {
     render() {

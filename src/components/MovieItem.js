@@ -1,4 +1,4 @@
-import { Component } from '../core/core'
+import { Component } from '../core/core.js'
 
 export default class MovieItem extends Component {
     constructor(props) { //props 영화 데이터

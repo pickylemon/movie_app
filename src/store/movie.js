@@ -1,10 +1,11 @@
-import { Store } from '../core/core' 
+import { Store } from '../core/core.js' 
 
 const store = new Store({
     searchText: '',
     page: 1,
     pageMax : 1,
     movies: [],
+    movie: {}, //영화 상세 정보를 가지는 객체
     loading: false,
     message : 'Search for the movie title!' //기본 메시지
 })
@@ -37,4 +38,16 @@ export const searchMovies = async page => {
         //API로부터의 응답이 True, False 관계 없이 loading은 종료해주어야 한다.
         //+에러 상황에서도 loading은 false로 바꿔주어야 하므로 finally 문 안으로!
     }
+}
+
+export const getMovieDetails = async id => {
+    try{
+        //i는 고유한 IMDb ID에 해당(OMDb API 명세를 참고하기)
+        const res = await fetch(`https://www.omdbapi.com/?apikey=e63959c9&i=${id}&plot=full`)
+        store.state.movie = await res.json()
+
+    } catch(error) {
+        console.log('getMovieDetails error:', error)
+    }
+
 }

@@ -1,4 +1,4 @@
-import { Component } from '../core/core'
+import { Component } from '../core/core.js'
 import movieStore, { searchMovies } from '../store/movie'
 
 export default class Search extends Component {
