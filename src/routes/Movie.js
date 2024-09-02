@@ -4,14 +4,21 @@ import movieStore, { getMovieDetails } from '../store/movie'
 //영화 상세정보 페이지 Component
 export default class Movie extends Component {
     async render() {
+        this.el.classList.add('container', 'the-movie')
+        this.el.innerHTML = /* html */ `
+            <div class="poster skeleton"></div>
+            <div class="specs">
+                <div class="title skeleton"></div>
+                <div class="labels skeleton"></div>
+                <div class="plot skeleton"></div>                
+            </div>
+        `
         await getMovieDetails(history.state.id)
         console.log(movieStore.state.movie)
         const { movie } = movieStore.state
         const bigPoster = movie.Poster.replace('SX300', 'SX700') 
         //실시간 리사이징(서버로부터 이미지 사이즈를 실시간으로 리사이징해서 받아옴)
 
-
-        this.el.classList.add('container', 'the-movie')
         this.el.innerHTML = /* html */`
             <div 
                 style="background-image: url(${bigPoster})"
