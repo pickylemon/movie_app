@@ -2,11 +2,11 @@
 html {
     --color-black: #0E111B;
     --color-white: #FFF;
-    --color-whitle-50: rgba(255, 255, 255, .5);
-    --color-whitle-30: rgba(255, 255, 255, .3);
-    --color-whitle-20: rgba(255, 255, 255, .2);
-    --color-whitle-10: rgba(255, 255, 255, .1);
-    --color-whitle-5: rgba(255, 255, 255, .05);
+    --color-white-50: rgba(255, 255, 255, .5);
+    --color-white-30: rgba(255, 255, 255, .3);
+    --color-white-20: rgba(255, 255, 255, .2);
+    --color-white-10: rgba(255, 255, 255, .1);
+    --color-white-5: rgba(255, 255, 255, .05);
     --color-primary: #FDC000;
     --color-hover: #F86A05;
     --color-area: #1C212E;
@@ -347,3 +347,27 @@ footer a:hover {
     margin: 24px 0 6px;
 }
 
+.about .photo {
+    width: 230px;
+    height: 230px;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+    background-size: cover;
+}
+.about .name {
+    font-size: 40px;
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 20px;
+}
+.about p {
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 4px;
+}
+.about a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+.about a:hover {
+    text-decoration: underline;
+}
