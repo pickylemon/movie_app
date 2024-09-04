@@ -6,8 +6,8 @@ root.append(new App().el)
 
 router()
 
-;(async () => {
-    const res = await fetch('/api/test')
-    const json = await res.json()
-    console.log('api/test', json)
-})()
+// ;(async () => {
+//     const res = await fetch('/api/test')
+//     const json = await res.json()
+//     console.log('api/test', json)
+// })() //테스트 코드
