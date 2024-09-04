@@ -20,7 +20,14 @@ export const searchMovies = async page => {
     }
     //vercel을 사용할거라 요청url도 http에서 https로 바꿔줘야함
     try{
-        const res = await fetch(`https://www.omdbapi.com/?apikey=e63959c9&s=${store.state.searchText}&page=${page}`)
+        //const res = await fetch(`https://www.omdbapi.com/?apikey=API키가_노출된다&s=${store.state.searchText}&page=${page}`)
+        const res = await fetch('/api/movie', {
+            method: 'POST', //body에 데이터를 담기 위해
+            body: JSON.stringify({
+                title: store.state.searchText,
+                page
+            })
+        })
         const { Search, totalResults, Response, Error } = await res.json()
         if(Response === 'True') {
             store.state.movies = [
@@ -43,7 +50,13 @@ export const searchMovies = async page => {
 export const getMovieDetails = async id => {
     try{
         //i는 고유한 IMDb ID에 해당(OMDb API 명세를 참고하기)
-        const res = await fetch(`https://www.omdbapi.com/?apikey=e63959c9&i=${id}&plot=full`)
+        // const res = await fetch(`https://www.omdbapi.com/?apikey=API키가_노출된다&i=${id}&plot=full`)
+        const res = await fetch('/api/movie', {
+            method: 'POST',
+            body: JSON.stringify({
+                id
+            })
+        })
         store.state.movie = await res.json()
 
     } catch(error) {
