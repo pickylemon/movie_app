@@ -25,6 +25,20 @@ body {
     padding: 40px 0;
 }
 
+/*반응형 레이아웃을 위한 미디어 쿼리 적용*/
+@media (max-width: 1200px) {
+    .container {
+        /*화면을 축소하면 양 옆도 padding 적용(레이아웃이 답답하지 않게)*/
+        padding: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 40px 20px;
+    }
+}
+
 /* 버튼 */
 .btn {
     height: 50px;
@@ -162,6 +176,18 @@ header .user img {
     width: 100%;
 }
 
+@media (max-width: 600px) {
+    header {
+        padding: 14px 20px;
+    }
+    header nav {
+        display: none;
+    }
+    header .user {
+        right: 20px;
+    }
+}
+
 /* footer */
 footer {
     padding: 40px 40px 60px;
@@ -195,6 +221,12 @@ footer a:hover {
     color: var(--color-whitle-30);
 }
 
+
+@media (max-width: 600px) {
+    .headline h1 {
+        font-size: 60px;
+    }
+}
 
 /* 검색 */
 .search {
@@ -345,6 +377,28 @@ footer a:hover {
     font-family: "Oswald", sans-serif;
     color: var(--color-white);
     margin: 24px 0 6px;
+}
+
+
+@media (max-width: 1200px) {
+    .the-movie {
+        gap: 30px;
+    }
+
+    .the-movie .poster {
+        --width: 300px;
+    }
+}
+
+@media (max-width: 720px) {
+    .the-movie {
+        /* 화면 가로넓이가 축소되면 flex로 보여주기 어려우므로 그냥 블록으로 보여줌*/
+        display: block;
+    }
+    .the-movie .title {
+        font-size: 50px;
+        margin-top: 50px;
+    }
 }
 
 .about .photo {
