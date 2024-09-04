@@ -1,16 +1,20 @@
 {
   "name": "movie_app",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "dev": "parcel ./index.html",
-    "build": "parcel build ./index.html"
+    "build": "parcel build ./index.html",
+    "vercel": "vercel dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "parcel": "^2.12.0"
+    "parcel": "^2.12.0",
+    "vercel": "^37.3.0"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0"
   }
 }
